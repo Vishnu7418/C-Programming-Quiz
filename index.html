@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>C Programming Quiz</h1>
+            <p>Test your knowledge across 16 comprehensive topics</p>
+        </div>
+
+        <div class="main-content">
+            <div class="topic-selector" id="topicSelector">
+                <h2 style="margin-bottom: 20px; color: #2c3e50;">Choose a Topic:</h2>
+                <div class="topic-grid">
+                    <button class="topic-btn" data-topic="intro">Introduction</button>
+                    <button class="topic-btn" data-topic="syntax">Syntax</button>
+                    <button class="topic-btn" data-topic="comments">Comments</button>
+                    <button class="topic-btn" data-topic="variables">Variables</button>
+                    <button class="topic-btn" data-topic="datatypes">Data Types</button>
+                    <button class="topic-btn" data-topic="constants">Constants</button>
+                    <button class="topic-btn" data-topic="operators">Operators</button>
+                    <button class="topic-btn" data-topic="boolean">Boolean</button>
+                    <button class="topic-btn" data-topic="ifelse">If-Else</button>
+                    <button class="topic-btn" data-topic="loops">Loops</button>
+                    <button class="topic-btn" data-topic="breakcontinue">Break/Continue</button>
+                    <button class="topic-btn" data-topic="strings">Strings</button>
+                    <button class="topic-btn" data-topic="pointers">Pointers</button>
+                    <button class="topic-btn" data-topic="arrays">Arrays</button>
+                    <button class="topic-btn" data-topic="functions">Functions</button>
+                    <button class="topic-btn" data-topic="structures">Structures</button>
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn" id="startAllTopics">Take Complete Quiz (160 Questions)</button>
+                </div>
+            </div>
+
+            <div class="quiz-container" id="quizContainer">
+                <div class="question-header">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <h2 id="topicTitle">Topic Name</h2>
+                    <p id="questionCounter">Question 1 of 10</p>
+                </div>
+
+                <div class="question" id="questionContainer">
+                    <!-- Questions will be loaded here -->
+                </div>
+
+                <div class="controls">
+                    <button class="btn" id="prevBtn" disabled>Previous</button>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn" id="exitBtn" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">Exit Quiz</button>
+                        <button class="btn" id="nextBtn">Next</button>
+                        <button class="btn" id="finishBtn" style="display: none;">Finish Quiz</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results" id="results" style="display: none;">
+                <h2 style="color: #2c3e50; margin-bottom: 20px;">Quiz Results</h2>
+                <div class="score-circle" id="scoreCircle">
+                    <div class="score-text" id="scoreText">0%</div>
+                </div>
+                <div class="score-details">
+                    <div class="score-item">
+                        <h3>Correct Answers</h3>
+                        <p id="correctCount">0</p>
+                    </div>
+                    <div class="score-item">
+                        <h3>Incorrect Answers</h3>
+                        <p id="incorrectCount">0</p>
+                    </div>
+                    <div class="score-item">
+                        <h3>Total Questions</h3>
+                        <p id="totalCount">0</p>
+                    </div>
+                    <div class="score-item">
+                        <h3>Percentage</h3>
+                        <p id="percentage">0%</p>
+                    </div>
+                </div>
+                <button class="btn home-btn" id="homeBtn">Back to Topics</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
